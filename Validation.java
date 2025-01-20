@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.regex.*;
 public class Validation {
+	//Checking Leap year or Not for Date of Birth validation
 	public static Boolean checkLeapYear(int n)
 	{
 		
@@ -17,6 +18,7 @@ public class Validation {
 			return false;
 		}
 	}
+	//Name Validation
 	public static String checkValidName(Scanner sc)
 	{
 		String name;
@@ -35,6 +37,7 @@ public class Validation {
 		return name;
 		
 	}
+	//Email Validation
 	public static String checkValidEmail(Scanner sc)
 	{
 		String email;
@@ -53,6 +56,7 @@ public class Validation {
 		return email;
 		
 	}
+	//Date of Birth Validation
 	public static String checkValidDob(Scanner sc)
 	{
 		String dob;
