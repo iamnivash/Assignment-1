@@ -114,7 +114,7 @@ public class Validation {
 		
 		System.out.println("Registration Successfull");
 		System.out.println("Name: " + name);
-		System.out.println("Name: " + emailid);
-		System.out.println("Name: " + dob);
+		System.out.println("Email Id: " + emailid);
+		System.out.println("Date of Birth: " + dob);
 	}
 }
