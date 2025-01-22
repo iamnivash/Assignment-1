@@ -1,0 +1,34 @@
+Topic: Design Cric Info System
+---------------------------------------------------------------------------
+Problem 1. Dynamic creation of different types of match data (live, historical, upcoming).
+
+Solution:- Factory pattern:
+
+The Factory Method pattern will be used to create different types of match information (e.g., LiveMatch, HistoricalMatch, UpcomingMatch). 
+The system will have a MatchFactory interface, which will allow the creation of different match objects based on the type of match. 
+----------------------------------------------------------------------------
+Problem 2. Centralized access to match data for consistency and resource management.
+
+Solution:- Singleton pattern:
+
+In the Cric Info system, a DataManager class can be implemented as a Singleton. 
+This class will handle the retrieval and storage of cricket match data, including live score updates, player information, and match statistics. 
+we ensure that only one instance of the DataManager is used across the system, 
+making it easier to manage shared resources and maintain consistency in the data being displayed to users.
+------------------------------------------------------------------------------
+Problem 3. Efficiently handling multiple simultaneous user requests for live match updates.
+
+Solution:- Multithreading:
+
+By using multithreading, the Cric Info system can handle multiple requests for live updates concurrently. 
+This is crucial for real-time data handling, where users might request live scores, player stats, or match updates simultaneously during a live match.
+Multithreading ensures:- 
+                       Processing of requests efficiently and without delay.
+                       Providing instant updates to users even during peak traffic or major cricket events. 
+--------------------------------------------------------------------------------
+Problem 4. Encapsulating complex cricket statistics and calculating metrics.
+
+Solution:- Strategy Pattern
+
+Use the Strategy pattern to define various algorithms for calculating player statistics, performance metrics, and other cricket-specific calculations.
+
