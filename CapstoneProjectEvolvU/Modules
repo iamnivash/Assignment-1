@@ -1,0 +1,23 @@
+1) Main
+2) Admin
+3) User
+4) instructor
+5) Authentication
+6) UserProfile
+7) Instructor Profile
+8) Courses 
+9) Payment
+10) Notification
+11) Syllabus
+12) Assignment
+13) Quiz
+14) Certificates
+15) Report
+
+
+Nivash -> Course,	Syllabus	
+Abinesh	-> Payment,	 Notification	
+Kowsalya	-> UserProfile,	InstructorProfile	Instructor
+Varsha	-> Main,	admin,	User
+Purushothaman	-> Assignment,	Quiz,	Certifications
+Rakesh	-> Authentication,	Report	
