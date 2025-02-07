@@ -1,0 +1,35 @@
+
+1-> c) abcq
+2-> d) abcqfghq
+3-> b.) 5
+4-> a.) 1
+5-> d.) false true
+6-> a) 0
+7-> b.) 2
+8-> c) false
+9-> final, private, static
+10-> c.) 7 
+11-> d.) compilation error
+12-> d) The variable first is set to elements[0]
+13-> b.) 2
+14-> d.) any class that extends Target
+15-> c) A NullPointerException occurs at runtime
+16-> d.) llo i l
+17-> a.) 6 4 6 9
+18-> a.) a is a lower case letter
+	   is a white space character
+19 -> b.) e
+20 -> c) 16.46666666666667
+21 -> d) all of the mentioned
+22 -> c) 32
+23-> a) 301.5656
+24-> b)
+ 0.01
+ 0.00999999999999999
+25->
+26-> c) public prototype(void)
+
+27-> a) E U
+28-> c) 295 300
+29-> d) An exception is thrown at runtime
+30->
