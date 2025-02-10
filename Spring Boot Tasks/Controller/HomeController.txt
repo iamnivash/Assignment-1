@@ -1,0 +1,47 @@
+package com.example.demo;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class HomeController {
+
+	@GetMapping("/hello")
+	public String fill(@RequestParam(value="name", defaultValue = "Buddy") String name, Model model)
+	{
+		model.addAttribute("name", name);
+		return "home";
+	}
+    @GetMapping("/fill")
+    public String showForm() {
+        return "form"; // form.jsp
+    }
+
+    @PostMapping("/submitForm")
+    public String submitForm(@RequestParam(value="name") String name, @RequestParam(value="email") String email, Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("email", email);
+        return "result"; // result.jsp
+    }
+    
+    /*@GetMapping("/greet")
+	public String greet(@RequestParam(value = "name", defaultValue = "Guest") String name,Model model) {
+        // Pass the 'name' parameter to the JSP view
+		model.addAttribute("name", name);
+        return "greet"; // This will map to greet.jsp
+	}*/
+    
+    @RequestMapping("/customError")
+    public String handleCustomError(HttpServletRequest request, Model model) {
+        model.addAttribute("error", "Something went wrong!");
+        return "errorPage";
+    }
+
+    
+}
