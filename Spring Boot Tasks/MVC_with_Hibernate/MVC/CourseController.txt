@@ -1,0 +1,38 @@
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+import com.example.demo.module.CourseBean;
+import com.example.demo.service.CourseService;
+
+import java.util.List;
+
+@Controller
+@RequestMapping("/") // Base path
+public class CourseController {
+
+    @Autowired
+    private CourseService courseService;
+
+    // Fetch all courses and return the JSP view
+    @GetMapping("/courses")
+    public String getAllCourses(Model model) {
+        List<CourseBean> courses = courseService.get();
+        model.addAttribute("courses", courses);
+        return "course"; // Looks for WEB-INF/views/course.jsp
+    }
+
+    // Fetch a specific course by ID and return the details page
+    @GetMapping("/courses/{id}")
+    public String getCourseById(@PathVariable int id, Model model) {
+        CourseBean course = courseService.getbyId(id);
+        if (course == null) {
+            return "error"; // Redirect to error.jsp if course not found
+        }
+        model.addAttribute("course", course);
+        return "courseDetails"; // Looks for WEB-INF/views/courseDetails.jsp
+    }
+}

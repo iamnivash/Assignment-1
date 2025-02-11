@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+	<h1>Hello, ${name}!</h1>
+    <h2>Welcome to Home Page</h2>
+    <form action="/fill" method="get">
+        <button type="submit">Fill Form</button>
+    </form>
+</body>
+</html>

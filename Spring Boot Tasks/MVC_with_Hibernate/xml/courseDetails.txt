@@ -1,0 +1,26 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Course Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0px 0px 10px #aaa; }
+        h2 { color: #333; }
+        p { font-size: 16px; }
+        a { display: inline-block; margin-top: 10px; text-decoration: none; padding: 5px 10px; background: #007bff; color: white; border-radius: 5px; }
+        a:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Course Details</h2>
+        <p><strong>ID:</strong> ${course.getId()}</p>
+        <p><strong>Name:</strong> ${course.getName()}</p>
+        <p><strong>Description:</strong> ${course.getDescription()}</p>
+        <p><strong>Duration:</strong> ${course.getDuration()} hours</p>
+        <p><strong>Price:</strong> $${course.getPrice()}</p>
+        <p><strong>Payment Mode:</strong> ${course.getPaymentMode()}</p>
+        <a href="${pageContext.request.contextPath}/courses">Back to Courses</a>
+    </div>
+</body>
+</html>
